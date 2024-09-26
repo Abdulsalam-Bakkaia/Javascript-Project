@@ -1,0 +1,93 @@
+html {
+  box-sizing: border-box;
+  background-color: #ffc600;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  font-weight: 200;
+}
+body {
+  margin: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.panels {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  background-color: #680f9c;
+  box-sizing: inset 0 0 0 5px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  font-size: 20px;
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  justify-content: center;
+}
+.panel1 {
+  background-image: url("./images/beauti\ city.jpg");
+}
+.panel2 {
+  background-image: url("./images/debruyne.jpg");
+}
+.panel3 {
+  background-image: url("./images/dragonball.jpg");
+}
+.panel4 {
+  background-image: url("./images/hh.jpg");
+}
+.panel5 {
+  background-image: url("./images/htmlg.jpg");
+}
+
+.panel > * {
+  margin: 0;
+  width: 100%;
+  transition: transform 0.5s;
+  flex: 1 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.panel > *:first-child {
+  transform: translateY(-100%);
+}
+.panel.open-active > *:first-child {
+  transform: translateY(0);
+}
+.panel > *:last-child {
+  transform: translateY(100%);
+}
+.panel.open-active > *:last-child {
+  transform: translateY(0);
+}
+
+.panel p {
+  text-transform: uppercase;
+  font-family: "Amalic SC", cursive;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  font-size: 2em;
+}
+
+.panel.open {
+  flex: 5;
+  font-size: 40px;
+}
+.cta {
+  color: white;
+  text-decoration: none;
+}
